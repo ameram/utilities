@@ -1,13 +1,8 @@
 import os
 
-print(os.getcwd())
-print("Write the directory you want to be renamed: ")
-dir_address = input()
-print(f'You wanted this address: {dir_address}\n\n')
+dir_address = input('Write the directory you want to be renamed: ')
+
 for root, dirs, files in os.walk(dir_address):
-    print(root)
-    print(f'Directories: {dirs}')
-    print(f'OLD files names: {files}')
     for file in files:
         if file.find('.') == 0:
             pass
@@ -16,4 +11,3 @@ for root, dirs, files in os.walk(dir_address):
             os.rename(f'{root}/{file}', f'{root}/{file_name}')
         elif not file.islower():
             os.rename(f'{root}/{file}', f'{root}/{file.lower()}')
-    print()

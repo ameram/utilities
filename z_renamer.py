@@ -2,6 +2,9 @@ import re
 import os
 import sys
 
+# Fist argument for path to directory
+# All others are starting point to removing, anything after those symbols will be removed
+# Uses regex
 
 path_to = sys.argv[1]
 
