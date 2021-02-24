@@ -1,6 +1,5 @@
 import os
 
-
 dir_address = input('Write the directory you want to be renamed: ')
 
 
